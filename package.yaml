@@ -1,0 +1,29 @@
+name:                testing-tutorial
+version:             0.0.0.0
+github:              "githubuser/testing-tutorial"
+license:             AllRightsReserved
+author:              "Tom Sydney Kerckhove"
+maintainer:          "syd@cs-syd.eu"
+copyright:           "2019 Tom Sydney Kerckhove"
+
+dependencies:
+- base >= 4.7 && < 5
+- validity
+
+library:
+  source-dirs: src
+
+tests:
+  testing-tutorial-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - QuickCheck
+    - genvalidity
+    - genvalidity-hspec
+    - hspec
+    - testing-tutorial
