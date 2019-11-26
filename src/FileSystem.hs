@@ -10,7 +10,7 @@ import Data.Validity
 
 newtype FileSystem =
   FileSystem {fileSystemFiles :: [(String, String)]}
-  deriving (Show, Eq, Generic)
+  deriving (Show, Eq, Ord, Generic)
 
 instance Validity FileSystem
 
